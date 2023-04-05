@@ -1,7 +1,6 @@
 const container = document.getElementById("container");
 const btnPupUp = document.getElementById("popup");
 const resetPad = document.getElementById("resetPad");
-resetPad.disabled = 1;
 let clickActive = false;
 let containerSize = 16;
 
@@ -17,7 +16,6 @@ btnPupUp.addEventListener("click", (e) => {
 resetPad.addEventListener("click", (e) => {
 	btnPupUp.disabled = 0;
 	createLayout(16);
-	resetPad.disabled = 1;
 });
 const validateNumber = (number) => {
 	if (Number.isInteger(number) && number > 0 && number <= 100) return true;
